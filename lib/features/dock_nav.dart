@@ -230,13 +230,13 @@ class _DockPainter extends CustomPainter {
     p.arcTo(Rect.fromCircle(center: Offset(c, f), radius: r), math.pi, -math.pi, false); // کف شیار
     p.quadraticBezierTo(c + r, 0, c + r + f, 0); // گوشه‌ی نرم خروجی
     p.lineTo(w - rad, 0);
-    p.arcToPoint(Offset(w, rad), radius: const Radius.circular(rad));
+    p.arcToPoint(Offset(w, rad), radius: Radius.circular(rad));
     p.lineTo(w, h - rad);
-    p.arcToPoint(Offset(w - rad, h), radius: const Radius.circular(rad));
+    p.arcToPoint(Offset(w - rad, h), radius: Radius.circular(rad));
     p.lineTo(rad, h);
-    p.arcToPoint(Offset(0, h - rad), radius: const Radius.circular(rad));
+    p.arcToPoint(Offset(0, h - rad), radius: Radius.circular(rad));
     p.lineTo(0, rad);
-    p.arcToPoint(const Offset(rad, 0), radius: const Radius.circular(rad));
+    p.arcToPoint(Offset(rad, 0), radius: Radius.circular(rad));
     p.close();
     return p;
   }
